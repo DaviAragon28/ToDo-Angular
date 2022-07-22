@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  tasks: string[] = ['a']
+  tasks: string[] = []
   task: string = ''
   btnDisabled: boolean = false;
   newTask() {
