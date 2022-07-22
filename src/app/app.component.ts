@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'to-do';
+  tasks: string[] = ['a']
+  task: string = ''
+  btnDisabled: boolean = false;
+  newTask() {
+    this.tasks.push(this.task)
+    this.task = ''
+  }
+
+  removeTasks(index: number) {
+    this.tasks.splice(index, 1)
+  }
+
+  done(index: number) {
+    return index  
+  }
+  // btnDisabled() {
+  //   if () {
+      
+  //   }
+  // }
 }

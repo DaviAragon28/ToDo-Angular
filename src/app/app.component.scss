@@ -1,0 +1,52 @@
+.container__ToDo {
+    min-width: 400px;
+    height: 400px;
+    // border-radius: 10px;
+    overflow-y: scroll;
+    background-color: lightblue;
+    text-align: center;
+    padding-bottom: 10px;
+    .ToDo--title {
+        display: inline-block;
+        margin: 10px 0px 30px;
+        font-size: 24px;
+    } 
+
+    .ToDo--NewTasks {
+        margin-bottom: 40px;
+        input {
+            border: none;
+            margin-right: 10px;
+            padding: 5px 10px;
+            border-radius: 10px;
+            background-color: #292727;
+            color: white;
+        }
+        button {
+            border: none;
+            padding: 5px 8px;
+            border-radius: 5px;
+        }
+    }
+    .ToDo--tasksList {
+        width: 300px;
+        margin: 0 auto;
+        text-align: left; 
+        .none--tasksList {
+            text-align: center;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            .container--buttons {
+                // margin-right: 20px;
+                button {
+                    border: none;
+                    padding: 3px 5px; 
+                    border-radius: 4px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
