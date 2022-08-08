@@ -1,19 +1,19 @@
 <div class="container__ToDo">
   <h3 class="ToDo--title">Tasks</h3>
   <div class="ToDo--NewTasks">
-    <input size="15" 
+    <input class="input" size="25" 
     type="text"
     placeholder="Write your task" 
     [(ngModel)]="task" 
-    minlength="4" maxlength="15">
-    <button (click)="newTask()">Write</button>
+    minlength="4" maxlength="20">
+    <button [disabled]="task === ''" (click)="newTask()">Write</button>
   </div>
   <div class="ToDo--tasksList" >
-    <p class="none--tasksList" *ngIf="tasks.length < 1">No tienes tareas aun.</p>
+    <p class="none--tasksList" *ngIf="tasks.length < 1">No tienes tareas todavía.</p>
     <ul>
-      <li *ngFor="let task of tasks; index as i">{{ task }} 
+      <li class="undone" [class.done]="done"  *ngFor="let task of tasks; index as i">{{ task }} 
         <div class="container--buttons">
-          <button [disabled]="btnDisabled" (click)="done(i)">Done</button>
+          <button (click)="doneBtn(i, task)">Done</button>
           <button (click)="removeTasks(i)">Delete</button>
         </div>
       </li>

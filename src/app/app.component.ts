@@ -9,6 +9,8 @@ export class AppComponent {
   tasks: string[] = []
   task: string = ''
   btnDisabled: boolean = false;
+  done: boolean = false;
+
   newTask() {
     this.tasks.push(this.task)
     this.task = ''
@@ -18,12 +20,11 @@ export class AppComponent {
     this.tasks.splice(index, 1)
   }
 
-  done(index: number) {
-    return index  
+  doneBtn(index: number, item: string) {
+    // const knowIndex = this.tasks.findIndex(item)
+    // if (knowIndex === index) {
+    //   console.log(index);
+      this.done =! this.done
+    // }
   }
-  // btnDisabled() {
-  //   if () {
-      
-  //   }
-  // }
 }

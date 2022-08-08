@@ -6,6 +6,15 @@
     background-color: lightblue;
     text-align: center;
     padding-bottom: 10px;
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: white;
+    }
+    &::-webkit-scrollbar-thumb{
+        width: 40px;
+        background-color: rgba(0, 0, 0, 0.635);
+        border-radius: 5px;
+    }
     .ToDo--title {
         display: inline-block;
         margin: 10px 0px 30px;
@@ -35,9 +44,22 @@
         .none--tasksList {
             text-align: center;
         }
-        li {
+        .undone {
+            background-color: white;
+
+            padding: 5px;
+            padding-left: 10px;
+            font-weight:500;
+            border-radius: 5px;
             display: flex;
+            margin-bottom: 15px;
             justify-content: space-between;
+            box-shadow: 8px 6px 14px 0px #0000008a;
+
+            &.done {
+                text-decoration: line-through;
+                color: green;
+            }
             .container--buttons {
                 // margin-right: 20px;
                 button {
